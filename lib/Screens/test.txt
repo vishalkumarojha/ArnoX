@@ -1,0 +1,121 @@
+SizedBox(
+                height: 20.h,
+              ),
+              Stack(
+                children: [
+                  Container(
+                    color: Colors.grey,
+                    width: 250.w,
+                    height: 250.h,
+                  ),
+                  _image == null
+                      ? Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 70.w,
+                            vertical: 120.h,
+                          ),
+                          child: const Text("No Image Selected"),
+                        )
+                      : Image.file(
+                          _image!,
+                          width: 250.w,
+                          height: 250.h,
+                          fit: BoxFit.fill,
+                        )
+                ],
+              ),
+              SizedBox(
+                height: 40.h,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.r),
+                      gradient: const LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomLeft,
+                        colors: [
+                          Colors.blue,
+                          Colors.blueAccent,
+                        ],
+                      ),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 5.h,
+                        horizontal: 10.w,
+                      ),
+                      child: TextButton(
+                        onPressed: () {
+                          _pickImage();
+                        },
+                        child: const Text(
+                          "Gallery",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.r),
+                      gradient: const LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomLeft,
+                        colors: [
+                          Colors.blue,
+                          Colors.blueAccent,
+                        ],
+                      ),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 5.h,
+                        horizontal: 10.w,
+                      ),
+                      child: TextButton(
+                        onPressed: () {
+                          _clickImage();
+                        },
+                        child: const Text(
+                          "Camera",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 10.w),
+                child: Text(
+                  " Developers",
+                  style: TextStyle(fontSize: 22.r),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 22.w),
+                child: const Divider(),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 120.w),
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height *
+                      0.5, // Give it a fixed height
+                  child: ListView.builder(
+                    itemCount: names.length,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        title: Text(names.keys.elementAt(index)),
+                        subtitle: Text(names.values.elementAt(index)),
+                      );
+                    },
+                  ),
+                ),
+              ),
