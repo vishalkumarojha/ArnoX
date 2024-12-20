@@ -19,15 +19,53 @@ ArnoX is an innovative image-to-speech narration app designed to assist visually
 ## Future Directions
 We aim to expand ArnoX's capabilities by incorporating video description features, providing even greater accessibility and utility for our users.
 
+## How to Clone and Run the Project
+
+### Prerequisites
+1. Ensure that Flutter SDK is installed on your machine. You can follow the official [Flutter installation guide](https://flutter.dev/docs/get-started/install).
+2. Install Android Studio and set up an emulator or connect a physical device.
+3. Make sure you have Firebase credentials set up for your project.
+
+### Steps to Clone and Run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/ArnoX.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd ArnoX
+   ```
+3. Install dependencies:
+   ```bash
+   flutter pub get
+   ```
+4. Run the application:
+   ```bash
+   flutter run
+   ```
+
+## Dependencies
+- `flutter_screenutil`
+- `image_picker`
+- `GetX`
+- `google_ml_kit`
+- `flutter_tts`
+- `firebase_core`
+- `firebase_auth`
+- `cloud_firestore`
+- `flutter_lints`
+
 ## Acknowledgments
 Special thanks to **Dr. Swagat Kumar Samantaray**, our supervisor, and to my amazing teammates:
-- **Abhishek Kumar**
-- **Rishav Mishra**
-- **Mansi Kaushik**
-- **Saniya Saw**
+- [**Abhishek Kumar**]([https://github.com/abhishekkumar](https://github.com/HeyAbhishekKumar))
+- [**Rishav Mishra**]([https://github.com/rishavmishra](https://github.com/Rishav262004))
+- [**Mansi Kaushik**]
+- [**Saniya Saw**]
 
 ## Demo Video
 Watch the demo video below to see ArnoX in action:
-[Demo Video Link](https://lnkd.in/djsQA8Vf)
+[Demo Video Link](https://drive.google.com/drive/folders/1eU149rxp_0HF6qtduaogPuFDG7H8sSfh?usp=sharing
+![image](https://github.com/user-attachments/assets/895d2eb8-a3b3-4b28-93e0-bbb7fa9b5eb5)
+)
 
 
